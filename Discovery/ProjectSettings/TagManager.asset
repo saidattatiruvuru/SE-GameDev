@@ -16,7 +16,7 @@ TagManager:
   - 
   - Player
   - 
-  - 
+  - RainLight
   - 
   - 
   - 
@@ -41,4 +41,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: RainLight
+    uniqueID: 3301446161
     locked: 0
