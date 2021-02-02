@@ -14,20 +14,33 @@ public class PlayerMovement : MonoBehaviour
 
     bool jump = false;
 
+    protected bool isAlive = true;
+
+    public void Dead()
+    {
+        isAlive = false;
+
+        animator.SetBool("isAlive", false);
+
+    }
+
     // Update is called once per frame
     void Update()
     {
-        horizontalMove = Input.GetAxisRaw("Horizontal") * speed;
+        if (isAlive) {
 
-        animator.SetFloat("speed", Mathf.Abs(horizontalMove));
+            horizontalMove = Input.GetAxisRaw("Horizontal") * speed;
 
-        Debug.Log(Input.GetButtonDown("Jump"));
+            animator.SetFloat("speed", Mathf.Abs(horizontalMove));
 
-        if(Input.GetButtonDown("Jump"))
-        {
-            animator.SetBool("jump", true);
-            jump = true;
+            if (Input.GetButtonDown("Jump"))
+            {
+                animator.SetBool("jump", true);
+                jump = true;
+            }
+
         }
+        
     }
 
     public void OnLanding()
@@ -37,8 +50,13 @@ public class PlayerMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-        controller.Move(horizontalMove * Time.fixedDeltaTime, false, jump);
+        if (isAlive)
+        {
+            controller.Move(horizontalMove * Time.fixedDeltaTime, false, jump);
 
-        jump = false;
+            jump = false;
+        }
+
+        
     }
 }
