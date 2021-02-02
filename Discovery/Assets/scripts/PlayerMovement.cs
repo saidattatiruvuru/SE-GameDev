@@ -21,6 +21,7 @@ public class PlayerMovement : MonoBehaviour
         isAlive = false;
 
         animator.SetBool("isAlive", false);
+        horizontalMove = 0f;
 
     }
 
@@ -50,13 +51,10 @@ public class PlayerMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (isAlive)
-        {
-            controller.Move(horizontalMove * Time.fixedDeltaTime, false, jump);
+       
+         controller.Move(horizontalMove * Time.fixedDeltaTime, false, jump);
 
-            jump = false;
-        }
-
+         jump = false;
         
     }
 }
