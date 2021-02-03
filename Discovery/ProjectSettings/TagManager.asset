@@ -10,6 +10,7 @@ TagManager:
   - Lightning
   - Acid
   - Smoke
+  - LevelFinish
   layers:
   - Default
   - TransparentFX
@@ -22,7 +23,7 @@ TagManager:
   - Player
   - Obstacle
   - RainLight
-  - 
+  - Orb
   - 
   - 
   - 
