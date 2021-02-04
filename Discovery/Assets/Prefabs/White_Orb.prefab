@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1054861334604859374}
   - component: {fileID: 1054861334604859375}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: orb
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25,7 +25,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1054861334604859361}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 30.98221}
+  m_LocalPosition: {x: 0.035, y: -0.035, z: 30.98221}
   m_LocalScale: {x: 0.04, y: 0.04, z: 1}
   m_Children: []
   m_Father: {fileID: 1054861336410881281}
@@ -91,7 +91,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1054861335449443966}
   - component: {fileID: 1054861335449443967}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Point Light 2D
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -163,7 +163,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1054861336199513319}
   - component: {fileID: 1054861336199513316}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Bubble_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -243,7 +243,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1054861336410881281}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: White_Orb
   m_TagString: Untagged
   m_Icon: {fileID: 0}
