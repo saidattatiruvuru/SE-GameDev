@@ -50,11 +50,11 @@ public class CoinPicker : MonoBehaviour
             other.transform.tag = "Collected";
             other.gameObject.SetActive(false);
             coin++;
-            Debug.Log(coin);
+            //Debug.Log(coin);
             score.text = coin.ToString();
         }
 
-        else if (other.gameObject.layer == 11)
+        else if (other.gameObject.layer == 11 && other.transform.tag != "Collected")
         {
             other.transform.tag = "Collected";
             other.gameObject.SetActive(false);
@@ -65,7 +65,7 @@ public class CoinPicker : MonoBehaviour
 
         else if (other.transform.tag == "LevelFinish")
         {
-            if(orb == LevelOrbs)
+            if(orb >= LevelOrbs)
             {
                 SuccessCanvas.gameObject.SetActive(true);
                 Finalscore.text = coin.ToString();

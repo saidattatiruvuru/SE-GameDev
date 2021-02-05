@@ -51,3 +51,6 @@ TagManager:
   - name: RainLight
     uniqueID: 3301446161
     locked: 0
+  - name: CoinLight
+    uniqueID: 2020334961
+    locked: 0
