@@ -24,6 +24,7 @@ public class ObstacleDetector : MonoBehaviour
             Acidpanel.SetActive(false);
             Smokepanel.SetActive(false);
             Lightningpanel.SetActive(false);
+           
             player.Dead();
             Debug.Log("dead");
             deadCanvas.gameObject.SetActive(true);

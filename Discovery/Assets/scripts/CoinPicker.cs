@@ -16,6 +16,8 @@ public class CoinPicker : MonoBehaviour
     public TextMeshProUGUI Finalscore;
 
     public Canvas SuccessCanvas;
+    public Canvas deadCanvas;
+    public GameObject Incompletepanel;
 
     public void GoToCollection()
     {
@@ -41,6 +43,9 @@ public class CoinPicker : MonoBehaviour
         score = GetComponent<TextMeshProUGUI>();
         SuccessCanvas = GetComponent<Canvas>();
         SuccessCanvas.gameObject.SetActive(false);
+        deadCanvas = GetComponent<Canvas>();
+        deadCanvas.gameObject.SetActive(false);
+        Incompletepanel.SetActive(false);
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -69,6 +74,12 @@ public class CoinPicker : MonoBehaviour
             {
                 SuccessCanvas.gameObject.SetActive(true);
                 Finalscore.text = coin.ToString();
+            }
+
+            else
+            {
+                deadCanvas.gameObject.SetActive(true);
+                Incompletepanel.SetActive(true);
             }
             Debug.Log("FINISHED");
             Debug.Log(orb);
