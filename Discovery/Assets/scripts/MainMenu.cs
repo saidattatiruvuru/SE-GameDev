@@ -9,6 +9,7 @@ public class MainMenu : MonoBehaviour
 
     public Canvas MenuPage , Collection;
     public TextMeshProUGUI score;
+    int n;
 
     void OnStart()
     {
@@ -19,9 +20,9 @@ public class MainMenu : MonoBehaviour
 
     void Start()
     {
-                
-
+        
         Debug.Log("on start!!!!");
+
         if (PlayerPrefs.HasKey("HomePage") && PlayerPrefs.GetString("HomePage") =="Collection")
         {
             Debug.Log("COLLECTION");
@@ -47,6 +48,20 @@ public class MainMenu : MonoBehaviour
 
     public void PlayGame()
     {
-        SceneManager.LoadScene(1);
+        if (!PlayerPrefs.HasKey("MaxLevel"))
+        {
+            PlayerPrefs.SetInt("MaxLevel", 1);
+            n = 1;
+        }
+
+        else
+        {
+            n = PlayerPrefs.GetInt("MaxLevel");
+        }
+
+        if (n <= 5)
+        SceneManager.LoadScene(n+1);
+        else 
+        SceneManager.LoadScene(6);
     }
 }

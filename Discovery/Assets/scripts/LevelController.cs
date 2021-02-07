@@ -61,7 +61,8 @@ public class LevelController : MonoBehaviour
     {
         Debug.Log("Start!!!!!");
         //PlayerPrefs.SetInt("MaxLevel", 0);
-
+        //PlayerPrefs.SetInt("Score", 0);
+        
         if (!PlayerPrefs.HasKey("MaxLevel"))
         {
             PlayerPrefs.SetInt("MaxLevel", 1);
@@ -72,7 +73,7 @@ public class LevelController : MonoBehaviour
             n = PlayerPrefs.GetInt("MaxLevel");
         }
 
-        Lev1.SetActive(true);
+       Lev1.SetActive(true);
 
         if (n >= 1)
         {
