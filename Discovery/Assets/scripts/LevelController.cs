@@ -19,7 +19,7 @@ public class LevelController : MonoBehaviour
     public GameObject OrbLev5;
     public GameObject OrbLev6;
 
-    private int n = 1;
+    private int n = 0;
 
     public void ToLev1()
     {
@@ -65,7 +65,7 @@ public class LevelController : MonoBehaviour
         
         if (!PlayerPrefs.HasKey("MaxLevel"))
         {
-            PlayerPrefs.SetInt("MaxLevel", 1);
+            PlayerPrefs.SetInt("MaxLevel", 0);
         }
 
         else

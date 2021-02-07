@@ -50,18 +50,26 @@ public class MainMenu : MonoBehaviour
     {
         if (!PlayerPrefs.HasKey("MaxLevel"))
         {
-            PlayerPrefs.SetInt("MaxLevel", 1);
-            n = 1;
+            PlayerPrefs.SetInt("MaxLevel", 0);
+            n = 0;
         }
 
         else
         {
             n = PlayerPrefs.GetInt("MaxLevel");
         }
-
+        Debug.Log("hekftdyhjk");
+        Debug.Log(PlayerPrefs.GetInt("MaxLevel"));
         if (n <= 5)
         SceneManager.LoadScene(n+1);
         else 
         SceneManager.LoadScene(6);
+    }
+
+    public void QuitGame()
+    {
+        Debug.Log("ending game");
+        PlayerPrefs.DeleteAll();
+        Application.Quit();
     }
 }
